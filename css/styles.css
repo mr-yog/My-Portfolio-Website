@@ -1,0 +1,460 @@
+/* ----------  Color Palette  ---------- */
+:root {
+  --yellow: #FFD600;
+  --black:  #000000;
+  --white:  #FFFFFF;
+}
+
+/* ----------  Base Reset  ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+/* ----------  Header  ---------- */
+header {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,.4);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+nav a {
+  color: var(--black);
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--white);
+}
+
+nav a i {
+  margin-right: 8px;
+  color: var(--black);
+  vertical-align: middle;
+}
+
+nav a:hover i,
+nav a.active i {
+  color: var(--white);
+}
+
+/* ----------  Main Padding  ---------- */
+main {
+  padding-top: 80px;
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ----------  Intro Section  ---------- */
+.intro-section {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 2rem 10rem;
+  justify-content: center;
+}
+
+.profile-photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--yellow);
+  box-shadow: 0 0 15px var(--yellow);
+}
+
+.intro-text {
+  max-width: 600px;
+}
+
+.intro-text h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  color: var(--yellow);
+  margin-bottom: 1.2rem;
+}
+
+.name {
+  color: var(--white);
+}
+
+.intro-text p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* ----------  Section Heading  ---------- */
+.section-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.6rem;
+  color: var(--yellow);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* ----------  Projects Section  ---------- */
+.projects-section {
+  padding: 4rem 2rem 8rem;
+  background: var(--black);
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project-card {
+  background: #111;
+  border: 2px solid var(--yellow);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 300px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: var(--yellow);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+
+/* ----------  Skills Section  ---------- */
+.skills-section {
+  background: #222;
+  padding: 4rem 2rem 8rem;
+  text-align: center;
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skills-list li {
+  background: var(--black);
+  border: 2px solid var(--yellow);
+  border-radius: 20px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: background 0.3s;
+  cursor: default;
+}
+
+.skills-list li:hover {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+/* ----------  About Section  ---------- */
+.about-section,
+.contact-section {
+  background: var(--black);
+  padding: 4rem 2rem 8rem;
+  max-width: 700px;
+  margin: 0 auto 8rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.contact-section {
+  background: #222;
+}
+
+.contact-section ul {
+  list-style: none;
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+.contact-section li {
+  margin-bottom: 0.8rem;
+}
+
+.contact-section a {
+  color: var(--yellow);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* ----------  Footer  ---------- */
+footer {
+  background: var(--yellow);
+  color: var(--black);
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: 600;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.4);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ----------  Hamburger Button (SVG Style) ---------- */
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  z-index: 20;
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+}
+
+/* ----------  Responsive ---------- */
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 65px;
+    right: 0;
+    background: var(--black);
+    width: 200px;
+    height: calc(100vh - 65px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  nav.open {
+    transform: translateX(0);
+  }
+
+  nav a {
+    display: block;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: var(--white);
+  }
+
+  nav a i {
+    color: var(--white);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem 1rem 8rem;
+  }
+
+  .intro-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .intro-text p {
+    font-size: 1.3rem;
+  }
+
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+.project-card {
+  background: #111;
+  border: 2px solid var(--yellow);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 214, 0, 0.08);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(255, 214, 0, 0.2);
+}
+.typing-text::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+  margin-left: 4px;
+  color: var(--yellow);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.intro-section {
+  justify-content: flex-start;
+  padding-left: 5rem; /* gives left breathing space */
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .intro-text {
+    text-align: center;
+    min-height: auto;
+  }
+}
+/* Preloader styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--black);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Simple spinning loader */
+.loader {
+  border: 6px solid #444;
+  border-top: 6px solid var(--yellow);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Navbar Resume Link */
+.resume-link {
+  background: var(--yellow);
+  color: var(--black) !important;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin-left: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.resume-link:hover {
+  background: #ffc107;
+  transform: translateY(-2px);
+}

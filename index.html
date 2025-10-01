@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yogesh Suryawanshi Portfolio</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Custom Styles for SVG Menu -->
+  <style>
+    .menu {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      padding: 0;
+      z-index: 1100;
+      position: relative;
+      width: 40px;
+      height: 40px;
+    }
+
+    .menu svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    .line {
+      fill: none;
+      stroke: black;
+      stroke-width: 6;
+      transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                  stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .line1, .line2, .line3 {
+      stroke-dasharray: 60 207;
+    }
+
+    .opened .line1 {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+    }
+
+    .opened .line2 {
+      stroke-dasharray: 1 60;
+      stroke-dashoffset: -30;
+    }
+
+    .opened .line3 {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: flex;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .menu {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="preloader">
+   <div class="loader"></div>
+  </div>
+
+
+  <!-- Header -->
+  <header data-aos="fade-down">
+    <h1>Yogesh Suryawanshi</h1>
+
+    <!-- SVG Hamburger Button -->
+    <button class="menu" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar"
+      onclick="
+        this.classList.toggle('opened');
+        this.setAttribute('aria-expanded', this.classList.contains('opened'))">
+      <svg viewBox="0 0 100 100">
+        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+        <path class="line line2" d="M 20,50 H 80" />
+        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+      </svg>
+    </button>
+
+    <!-- Navigation Menu -->
+    <nav id="navbar">
+      <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+      <a href="#projects"><i class="fas fa-folder-open"></i> Projects</a>
+      <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+      <a href="#about"><i class="fas fa-user"></i> About Me</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="assets/yogi.pdf" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="resume-link">
+    <i class="fas fa-file-alt"></i> Resume
+  </a>
+
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section id="home" class="intro-section" data-aos="fade-up">
+      <img src="images/profile.jpg" alt="Profile photo" class="profile-photo" />
+      <div class="intro-text">
+         <h2>
+          Hi, I'm <span class="name">Yogesh</span><br />
+          <span class="typing-text"></span>
+         </h2>
+        <p>A passionate Data Science and Analytics enthusiast.</p>
+      </div>
+
+    </section>
+
+
+<section id="projects" class="projects-section" data-aos="fade-up">
+  <h2 class="section-heading">Projects</h2>
+  <div class="project-grid">
+
+    <a href="https://github.com/mr-yog/Rice_Leaf_Disease_Detection" target="_blank" class="project-link">
+      <div class="project-card" data-aos="zoom-in">
+        <h3>Rice Leaf Disease Detection</h3>
+        <p>A Flask-based web app that detects rice leaf diseases from uploaded images. It predicts Bacterial leaf blight, Brown spot, or Leaf smut, features live image preview, dark mode toggle, and provides a user-friendly interface for farmers and researchers.</p>
+      </div>
+    </a>
+
+    <a href="https://github.com/mr-yog/Customer_Transaction_Prediction" target="_blank" class="project-link">
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Customer Transaction Prediction</h3>
+        <p>This project predicts whether a customer will make a transaction using machine learning models like Logistic Regression, ANN (MLP), and XGBoost. The best-performing model (ANN MLP) achieves high accuracy and F1-score, enabling reliable customer transaction prediction.</p>
+      </div>
+    </a>
+
+    <a href="https://github.com/mr-yog/Diwali-sales-and-customer-analytics" target="_blank" class="project-link">
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Diwali Sales & Customer Analytics</h3>
+        <p>A Power BI Dashboard analyzing Diwali sales and customer data with interactive dashboards, trends, top products, and customer insights to help businesses optimize marketing, inventory, and sales performance during the festive season.</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<section id="skills" class="skills-section" data-aos="fade-up">
+  <h2 class="section-heading">Skills</h2>
+  <ul class="skills-list">
+    <li>Python (NumPy, Pandas, Matplotlib, Seaborn)</li>
+    <li>Machine Learning (Scikit-learn, XGBoost)</li>
+    <li>Deep Learning (TensorFlow, Keras, PyTorch basics)</li>
+    <li>Data Cleaning & Preprocessing</li>
+    <li>Exploratory Data Analysis (EDA)</li>
+    <li>SQL & Database Management</li>
+    <li>Power BI & Tableau</li>
+    <li>Statistics & Probability</li>
+    <li>Data Visualization & Storytelling</li>
+    <li>Version Control (Git & GitHub)</li>
+  </ul>
+</section>
+
+<section id="about" class="about-section" data-aos="fade-right">
+  <h2 class="section-heading">About Me</h2>
+  <p>
+    I am Yogesh Suryawanshi, an aspiring Data Scientist and Analyst passionate about turning raw data into meaningful insights. I enjoy working with Python, SQL, and Machine Learning to solve real-world problems.
+  </p>
+  <p>
+    My interests include data visualization, predictive modeling, and building dashboards with tools like Power BI and Tableau. I’m always eager to learn, explore new technologies, and grow in the field of AI and Data Science.
+  </p>
+</section>
+
+
+
+
+
+    <section id="contact" class="contact-section" data-aos="fade-left">
+      <h2 class="section-heading">Contact</h2>
+      <p>You can reach me at:</p>
+      <ul>
+        <li>Email: yogeshsuryawanshi023@gmail.com</li>
+        <li>Phone: +91 99709 50017</li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/yog9970" target="_blank" rel="noopener">linkedin.com/in/yog9970</a></li>
+        <li>GitHub: <a href="https://github.com/mr-yog" target="_blank" rel="noopener">github.com/mr-yog</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer data-aos="fade-up">
+    <p>© 2025 Yogesh Suryawanshi</p>
+  </footer>
+
+  <!-- Smooth Scroll & Toggle Script -->
+<script>
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      const href = link.getAttribute('href');
+
+      // ✅ Allow external links like Resume to open normally
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        document.querySelectorAll('nav a').forEach(el => el.classList.remove('active'));
+        link.classList.add('active');
+        const targetId = href.substring(1);
+        document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+
+        const nav = document.getElementById('navbar');
+        const menuToggle = document.getElementById('menu-toggle');
+        if (nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          menuToggle.classList.remove('opened');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+      // else → do nothing, let browser handle (e.g. Resume PDF)
+    });
+  });
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('navbar');
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true });</script>
+  <script>
+  const typingElement = document.querySelector('.typing-text');
+  const words = ["Data Scientist", "AI & Analytics Explorer", "Data Analyst"];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingDelay = 100;
+  let erasingDelay = 50;
+  let newWordDelay = 1500;
+
+  function type() {
+    const currentWord = words[wordIndex];
+    if (isDeleting) {
+      typingElement.textContent = currentWord.substring(0, charIndex--);
+      if (charIndex < 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(type, typingDelay);
+      } else {
+        setTimeout(type, erasingDelay);
+      }
+    } else {
+      typingElement.textContent = currentWord.substring(0, charIndex++);
+      if (charIndex > currentWord.length) {
+        isDeleting = true;
+        setTimeout(type, newWordDelay);
+      } else {
+        setTimeout(type, typingDelay);
+      }
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    if (words.length) type();
+  });
+</script>
+<script>
+  window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '0';
+    preloader.style.visibility = 'hidden';
+    preloader.style.transition = 'opacity 0.6s ease';
+    setTimeout(() => preloader.remove(), 1000); // remove from DOM after fade out
+  });
+</script>
+</body>
+</html>
