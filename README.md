@@ -63,7 +63,7 @@ Netlify/Vercel (if you use them)
 
 If you’d like to connect or collaborate, feel free to reach out:
 
-Email: your-email@example.com
+Email: yogeshsuryawanshi023@gmail.com
 
 LinkedIn: Your LinkedIn
 
