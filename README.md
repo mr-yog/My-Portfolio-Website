@@ -25,14 +25,21 @@ It showcases my projects, skills, and contact information in a clean and respons
 
    git clone https://github.com/your-username/your-repo-name.git
 
-Navigate to the project folder:
+- Navigate to the project folder:
 
-cd your-repo-name
+- cd your-repo-name
 
-Open index.html in your browser.
+- Open index.html in your browser.
 
 
-📧 Contact
+## 🌍 Deployment
+
+This project is deployed on GitHub Pages:
+
+🔗 https://mr-yog.github.io/My-Portfolio-Website/
+
+
+## 📧 Contact
 
 If you’d like to connect or collaborate, feel free to reach out:
 
